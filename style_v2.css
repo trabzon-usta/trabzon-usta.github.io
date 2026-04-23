@@ -135,6 +135,15 @@ nav.scrolled {
 .whatsapp-btn:hover span { max-width: 200px; opacity: 1; margin-left: 10px; }
 
 /* Footer & Contact Specifics (ONLY) */
+.contact-info-card { 
+    padding: 2.5rem; background: rgba(30, 41, 59, 0.5); border-radius: 24px; 
+    border: 1px solid var(--glass-border); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px);
+}
+.contact-item { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.8rem; }
+.contact-item i { 
+    width: 48px; height: 48px; background: rgba(56, 189, 248, 0.1); border-radius: 12px; 
+    display: flex; justify-content: center; align-items: center; color: var(--accent-blue); font-size: 1.2rem; flex-shrink: 0;
+}
 .footer-brand-area { display: flex; flex-direction: column; gap: 1.5rem; }
 .footer-logo { font-size: 2rem !important; }
 .footer-description { color: var(--text-secondary); max-width: 400px; }
