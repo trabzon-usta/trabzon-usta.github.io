@@ -15,6 +15,9 @@
 html { scroll-behavior: smooth; }
 body { background-color: var(--bg-dark); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
 
+/* Global Link Cleanup */
+a { text-decoration: none !important; color: inherit; }
+
 /* Background Mesh */
 .bg-mesh {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
@@ -36,15 +39,15 @@ nav.scrolled {
 }
 
 .logo { 
-    font-size: 1.5rem; font-weight: 800; text-decoration: none; color: white; letter-spacing: -1px; 
+    font-size: 1.5rem; font-weight: 800; color: white !important; letter-spacing: -1px; 
     display: flex; align-items: center; gap: 12px;
 }
 .logo img { height: 40px; width: auto; }
 .logo span { color: var(--accent-blue); }
 
 .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-.nav-links a { text-decoration: none; color: var(--text-secondary); font-weight: 500; transition: var(--transition-smooth); }
-.nav-links a:hover { color: white; }
+.nav-links a { color: var(--text-secondary); font-weight: 500; transition: var(--transition-smooth); }
+.nav-links a:hover { color: white !important; }
 
 .mobile-toggle { display: none; color: white; font-size: 1.8rem; cursor: pointer; z-index: 1001; }
 
@@ -56,7 +59,6 @@ nav.scrolled {
     padding: 0 5%;
 }
 
-.hero-content { max-width: 850px; }
 .hero h1 { font-size: clamp(2.2rem, 8vw, 4.5rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; }
 .hero h1 span { color: var(--accent-blue); }
 .hero p { font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -65,11 +67,11 @@ nav.scrolled {
 
 /* Buttons */
 .btn { 
-    padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; 
+    padding: 1rem 2.5rem; border-radius: 50px; font-weight: 600; 
     transition: var(--transition-smooth); display: inline-flex; align-items: center; gap: 10px;
 }
-.btn-primary { background: var(--accent-blue); color: var(--bg-dark); }
-.btn-outline { border: 1px solid var(--accent-blue); color: var(--accent-blue); }
+.btn-primary { background: var(--accent-blue); color: var(--bg-dark) !important; }
+.btn-outline { border: 1px solid var(--accent-blue); color: var(--accent-blue) !important; }
 .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2); }
 
 /* Sections */
@@ -79,7 +81,8 @@ nav.scrolled {
 .section-header p { color: var(--text-secondary); font-size: 1.1rem; }
 
 /* Grids */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
+
 .service-card {
     background: var(--bg-card); padding: 3rem; border-radius: 24px; border: 1px solid var(--glass-border);
     -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: var(--transition-smooth);
@@ -87,19 +90,35 @@ nav.scrolled {
 .service-card:hover { transform: translateY(-10px); border-color: var(--accent-blue); background: rgba(30, 41, 59, 0.9); }
 .service-icon { font-size: 3rem; color: var(--accent-blue); margin-bottom: 1.5rem; }
 
-/* Contact Area */
-.contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 50px; }
-.contact-info-card { padding: 3rem; background: var(--bg-card); border-radius: 30px; border: 1px solid var(--glass-border); }
-.contact-item { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; }
-.contact-item i { width: 50px; height: 50px; background: rgba(56, 189, 248, 0.1); border-radius: 12px; display: flex; justify-content: center; align-items: center; color: var(--accent-blue); font-size: 1.25rem; }
+/* Blog Compact Cards - REFINED */
+.blog-card-compact {
+    background: rgba(30, 41, 59, 0.4); 
+    padding: 2.5rem; 
+    border-radius: 24px; 
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+    -webkit-backdrop-filter: blur(15px); 
+    backdrop-filter: blur(15px);
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+}
+.blog-card-compact:hover { 
+    border-color: var(--accent-blue); 
+    transform: translateY(-8px); 
+    background: rgba(30, 41, 59, 0.8); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.blog-card-compact h4 { font-size: 1.4rem; margin: 1rem 0; color: white; }
+.blog-card-compact p { color: var(--text-secondary); font-size: 1rem; line-height: 1.6; }
 
-/* WhatsApp Premium Button */
+/* WhatsApp */
 .whatsapp-btn {
     position: fixed; bottom: 30px; right: 30px; 
     height: 60px; min-width: 60px;
     background: #25d366; border-radius: 50px; 
     display: flex; align-items: center; justify-content: center;
-    color: white; text-decoration: none !important;
+    color: white !important;
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); z-index: 1001;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     overflow: hidden; padding: 0 18px; border: none;
@@ -112,25 +131,21 @@ nav.scrolled {
 .whatsapp-btn:hover { padding: 0 25px; }
 .whatsapp-btn:hover span { max-width: 200px; opacity: 1; margin-left: 10px; }
 
-/* Mobile Menu Optimization */
+/* Mobile */
 @media (max-width: 768px) {
     .section { padding: 80px 5%; }
     .hero h1 { font-size: 2.5rem; }
-    
     .mobile-toggle { display: block; }
-
     .nav-links {
         position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
         background: rgba(15, 23, 42, 0.98); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
         flex-direction: column; justify-content: center; align-items: center; 
-        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); gap: 3rem; z-index: 1000;
+        transition: 0.5s ease; gap: 3rem; z-index: 1000;
     }
     .nav-links.active { right: 0; }
-    .nav-links a { font-size: 1.8rem; color: white; }
-
+    .nav-links a { font-size: 1.8rem; color: white !important; }
     .cta-group { flex-direction: column; gap: 1rem; }
     .btn { width: 100%; justify-content: center; }
-
     .whatsapp-btn span { display: none; }
     .whatsapp-btn { width: 60px; padding: 0; border-radius: 50%; }
 }
