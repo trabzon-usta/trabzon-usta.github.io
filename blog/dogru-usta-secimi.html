@@ -9,8 +9,9 @@
     <style>
         .post-container { max-width: 800px; margin: 150px auto 100px; padding: 0 5%; }
         .post-header { margin-bottom: 50px; text-align: center; }
-        .post-content { background: var(--bg-card); padding: 3rem; border-radius: 30px; border: 1px solid var(--glass-border); line-height: 1.8; }
-        .back-btn { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; color: var(--text-secondary); text-decoration: none; }
+        .post-content { background: var(--bg-card); padding: 4rem; border-radius: 30px; border: 1px solid var(--glass-border); line-height: 1.8; font-size: 1.15rem; }
+        .back-btn { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; color: var(--text-secondary); text-decoration: none; font-weight: 600; }
+        @media (max-width: 768px) { .post-content { padding: 2rem; font-size: 1.05rem; } }
     </style>
 </head>
 <body>
@@ -18,14 +19,16 @@
     <nav id="navbar" class="scrolled">
         <a href="../index.html" class="logo">TRABZON<span>USTA</span></a>
     </nav>
-
     <article class="post-container">
-        <a href="../index.html#blog" class="back-btn"><i class="fas fa-arrow-left"></i> Dön</a>
-        <header class="post-header"><h1>Doğru Usta Seçimi</h1></header>
-        <section class="post-content">
-            <p>Tadilat ve tamirat işleri kritik bir rol oynar...</p>
-            <!-- Content truncated in recovery for speed, can be fully restored if needed -->
-            <p>Referanslar, uzmanlık ve dürüst iletişim çok önemlidir.</p>
+        <a href="../index.html#blog" class="back-btn"><i class="fas fa-arrow-left"></i> Blog Listesine Dön</a>
+        <header class="post-header">
+            <div style="color: var(--accent-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Ustalık Rehberi</div>
+            <h1>Doğru Usta Seçimi</h1>
+        </header>
+        <section class="post-content reveal active">
+            <p>Tadilat ve tamirat işleri, hem maddi hem de zaman açısından önemli yatırımlar gerektirir. Bu nedenle doğru usta seçimi, işin kalitesi açısından kritik bir rol oynar.</p>
+            <p>Referanslara dikkat edilmeli, ustanın uzmanlık alanı göz önünde bulundurulmalı ve mutlaka piyasa araştırması yapılmalıdır.</p>
+            <p>Ayrıca iş başlamadan önce detaylı bir sözlü veya yazılı anlaşma yapmak sürecin sorunsuz ilerlemesini sağlar.</p>
         </section>
     </article>
     <script src="../main.js"></script>

@@ -3,88 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evde Boya Yapmanın Püf Noktaları | Trabzon Usta Blog</title>
-    <!-- Font Awesome -->
+    <title>Evde Boya Yapmak | Trabzon Usta Blog</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Style (v2) -->
     <link rel="stylesheet" href="../style_v2.css">
     <style>
         .post-container { max-width: 800px; margin: 150px auto 100px; padding: 0 5%; }
         .post-header { margin-bottom: 50px; text-align: center; }
-        .post-meta { color: var(--accent-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
-        .post-content { 
-            background: var(--bg-card); padding: 4rem; border-radius: 30px; border: 1px solid var(--glass-border); 
-            line-height: 1.8; font-size: 1.15rem; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-        }
-        .post-content p { margin-bottom: 1.5rem; }
-        .back-btn { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; color: var(--text-secondary); text-decoration: none; }
-        
-        /* Telefon Numarası Animasyonu */
-        .phone-highlight {
-            display: inline-block;
-            margin-top: 2rem;
-            padding: 1.5rem 2.5rem;
-            background: rgba(56, 189, 248, 0.1);
-            border: 2px solid var(--accent-blue);
-            border-radius: 20px;
-            text-align: center;
-            width: 100%;
-        }
-        .phone-number {
-            display: block;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--accent-blue);
-            text-decoration: none;
-            margin-top: 0.5rem;
-            animation: pulse-glow 2s infinite;
-        }
-        @keyframes pulse-glow {
-            0% { transform: scale(1); text-shadow: 0 0 0px var(--accent-blue); }
-            50% { transform: scale(1.05); text-shadow: 0 0 20px var(--accent-blue); }
-            100% { transform: scale(1); text-shadow: 0 0 0px var(--accent-blue); }
-        }
-        @media (max-width: 768px) {
-            .post-container { margin-top: 100px; }
-            .post-content { padding: 2rem; font-size: 1.05rem; }
-            .phone-number { font-size: 1.5rem; }
-        }
+        .post-content { background: var(--bg-card); padding: 4rem; border-radius: 30px; border: 1px solid var(--glass-border); line-height: 1.8; font-size: 1.15rem; }
+        .back-btn { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 30px; color: var(--text-secondary); text-decoration: none; font-weight: 600; }
+        .phone-highlight { margin-top: 3rem; padding: 2rem; background: rgba(56, 189, 248, 0.1); border: 2px solid var(--accent-blue); border-radius: 20px; text-align: center; }
+        .phone-number { display: block; font-size: 2.2rem; font-weight: 800; color: var(--accent-blue); text-decoration: none; margin-top: 1rem; animation: pulse-glow 2s infinite; }
+        @keyframes pulse-glow { 0% { transform: scale(1); } 50% { transform: scale(1.05); text-shadow: 0 0 20px var(--accent-blue); } 100% { transform: scale(1); } }
+        @media (max-width: 768px) { .post-content { padding: 2rem; font-size: 1.05rem; } .phone-number { font-size: 1.6rem; } }
     </style>
 </head>
 <body>
     <div class="bg-mesh"></div>
     <nav id="navbar" class="scrolled">
         <a href="../index.html" class="logo">TRABZON<span>USTA</span></a>
-        <ul class="nav-links">
-            <li><a href="../index.html#home">Anasayfa</a></li>
-            <li><a href="../index.html#blog">Blog</a></li>
-        </ul>
     </nav>
-
     <article class="post-container">
         <a href="../index.html#blog" class="back-btn"><i class="fas fa-arrow-left"></i> Blog Listesine Dön</a>
         <header class="post-header">
-            <div class="post-meta">Boya Rehberi</div>
+            <div style="color: var(--accent-blue); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Boya Rehberi</div>
             <h1>Evde Boya Yapmak</h1>
         </header>
-
         <section class="post-content reveal active">
-            <p>Evde boya yapmak hem ekonomik hem de keyifli bir süreçtir; ancak doğru planlama ve uygulama yapılmadığında istenmeyen sonuçlarla karşılaşmak oldukça yaygındır. Bu nedenle, işe başlamadan önce bazı önemli noktalara dikkat etmek gerekir.</p>
-            
-            <p>İlk olarak, boya yapılacak alanın iyi bir şekilde hazırlanması büyük önem taşır. Duvar yüzeyinde bulunan çatlaklar, delikler veya kabarmalar mutlaka tamir edilmelidir. Aksi takdirde boya düzgün tutmaz ve yüzeyde pürüzlü bir görünüm oluşur.</p>
-
-            <p>Bir diğer önemli konu ise doğru boya ve malzeme seçimidir. Kullanılacak boyanın türü (su bazlı, silikonlu, yağlı vb.) yapılacak alanın özelliklerine göre belirlenmelidir. Örneğin, mutfak ve banyo gibi nemli alanlarda silinebilir ve neme dayanıklı boyalar tercih edilmelidir.</p>
-
-            <p>Boyaya başlamadan önce ortamın korunması da ihmal edilmemelidir. Zemin, mobilyalar ve prizler mutlaka örtülmeli veya bantlanmalıdır. Bu hem temizlik sürecini kolaylaştırır hem de istenmeyen boya lekelerinin önüne geçer.</p>
-
-            <p>Boya yaparken dikkat edilmesi gereken bir diğer husus ise uygulama tekniğidir. Boya genellikle yukarıdan aşağıya doğru ve eşit hareketlerle uygulanmalıdır. Rulo ile boyama yaparken “W” veya “M” hareketi kullanmak boyanın homojen dağılmasına yardımcı olur.</p>
-
-            <p>Ortamın havalandırılması da oldukça önemlidir. Boya sırasında ve sonrasında pencere açarak temiz hava akışı sağlanmalıdır. Bu hem sağlığınızı korur hem de boyanın daha hızlı kurumasına yardımcı olur.</p>
-
-            <p>Son olarak, acele etmemek ve planlı ilerlemek en kritik faktörlerden biridir. Boya işlemi sabır gerektirir; hızlı bitirme isteği çoğu zaman hatalı uygulamalara yol açar.</p>
-
+            <p>Evde boya yapmak hem ekonomik hem de keyifli bir süreçtir; ancak doğru planlama ve uygulama yapılmadığında istenmeyen sonuçlarla karşılaşmak oldukça yaygındır.</p>
+            <p>İlk olarak, boya yapılacak alanın iyi bir şekilde hazırlanması büyük önem taşır. Duvar yüzeyindeki çatlaklar mutlaka tamir edilmelidir.</p>
+            <p>Doğru boya ve malzeme seçimi, kaliteli rulo ve fırça kullanımı işinizi kolaylaştırır ve sonucun profesyonel görünmesini sağlar.</p>
+            <p>Boyaya başlamadan önce ortamın korunması (bantlanması) ve uygulama sırasında ortamın havalandırılması ihmal edilmemelidir.</p>
             <div class="phone-highlight">
-                <p>Profesyonel yardım için bizlere ulaşabilirsiniz</p>
+                <p>Yardıma mı ihtiyacınız var? Profesyonellerden destek alın:</p>
                 <a href="tel:05457606100" class="phone-number">0545 760 61 00</a>
             </div>
         </section>
