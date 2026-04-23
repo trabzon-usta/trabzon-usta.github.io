@@ -150,5 +150,31 @@ nav.scrolled {
     .whatsapp-btn { width: 60px; padding: 0; border-radius: 50%; }
 }
 
-.reveal { opacity: 0; transform: translateY(30px); transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
-.reveal.active { opacity: 1; transform: translateY(0); }
+/* Footer & Contact Specifics (ONLY) */
+.footer-brand-area { display: flex; flex-direction: column; gap: 1.5rem; }
+.footer-logo { font-size: 2rem !important; }
+.footer-description { color: var(--text-secondary); max-width: 400px; }
+
+.footer-social-group { display: flex; gap: 1.2rem; margin-top: 0.5rem; }
+.social-icon { 
+    width: 55px; height: 55px; background: var(--bg-card); border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    border: 1px solid var(--glass-border); color: white !important; font-size: 1.4rem;
+    transition: var(--transition-smooth); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+}
+.social-icon:hover { 
+    transform: translateY(-5px) scale(1.1); border-color: var(--accent-blue); color: var(--accent-blue) !important;
+    background: rgba(30, 41, 59, 0.9);
+}
+
+.footer-bottom { 
+    text-align: center; margin-top: 80px; padding-top: 40px; 
+    border-top: 1px solid var(--glass-border); color: var(--text-secondary); font-size: 0.9rem;
+}
+
+.contact-item a:hover { color: var(--accent-blue) !important; }
+
+@media (max-width: 768px) {
+    .footer-brand-area { align-items: center; text-align: center; margin-top: 2rem; }
+    .footer-social-group { justify-content: center; }
+}
